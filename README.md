@@ -1,10 +1,14 @@
 ## Run web application
 
-Request endpoint: `/api/foo%2Fbar` \
-Controller action will return expected response: HTTP 200 with content `foo%2Fbar`
+`$ dotnet run --project WebApplication/WebApplication.csproj `
+
+`HTTP GET: https://localhost:5001/api/foo%2Fbar`
+
+**Returns expected HTTP 200 with content `foo%2Fbar`.**
 
 ## Run Test
 
 `$ dotnet test`
 
-Expected: Test should not fail.
+**Expected:** Test expecting HTTP 200 should not fail. \
+**Actual:** Test failing with HTTP 404 Not Found response.
